@@ -7,6 +7,7 @@ import {
 import PageNotFound from "./components/Error/PageNotFound.tsx";
 import IndexPage from "./pages/IndexPage.tsx";
 import App from "./App.tsx";
+import ExplorerPage from "./pages/app/ExplorerPage.tsx";
 
 // & tailwind style file
 import "./index.css";
@@ -18,17 +19,21 @@ const router = createBrowserRouter([
     errorElement: <PageNotFound />,
   },
   {
-    path: '/app',
-    element: <App />,
-    errorElement: <PageNotFound/>
-  },
-  {
     path: '/auth/login',
     // element:
   },
   {
     path: '/auth/register',
   },
+  {
+    path: '/app',
+    element: <App />,
+    errorElement: <PageNotFound/>
+  },
+  {
+    path: '/app/explorer',
+    element: <ExplorerPage />
+  }
   // {
   //   path: '/app/post/:user'
   // }
