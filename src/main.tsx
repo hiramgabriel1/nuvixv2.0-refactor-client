@@ -1,10 +1,41 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
+import PageNotFound from "./components/Error/PageNotFound.tsx";
+import IndexPage from "./pages/IndexPage.tsx";
+import App from "./App.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+// & tailwind style file
+import "./index.css";
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <IndexPage />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: '/app',
+    element: <App />,
+    errorElement: <PageNotFound/>
+  },
+  {
+    path: '/auth/login',
+    // element:
+  },
+  {
+    path: '/auth/register',
+  },
+  // {
+  //   path: '/app/post/:user'
+  // }
+])
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
