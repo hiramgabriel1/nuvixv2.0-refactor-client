@@ -3,10 +3,12 @@
 ## Technologies
 
 This project uses the following technologies:
+
 - **Zustand**: A small, fast, and scalable state-management tool.
 - **Axios**: A promise-based HTTP client for the browser and Node.js.
 - **Tailwind CSS**: A utility-first CSS framework for creating custom designs without having to leave your HTML.
 - **React-Router-Dom**: Declarative routing for React.js.
+- **React-Cookie**: Manipulate cookies
 
 ## Installation
 
@@ -66,4 +68,3 @@ If you wish to contribute to this project, please follow these guidelines:
    ```
 
 5. **Create a pull request.**
-
