@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
+    "react-cookies": "^0.1.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
     "react-router-dom": "^6.26.0",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
+    "@types/react-cookies": "^0.1.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",

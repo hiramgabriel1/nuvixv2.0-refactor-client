@@ -1,17 +1,20 @@
-import HttpClient, { IsSuccess, IsUnauthorized } from "../../../utils/HttpManager";
-import { isStringEmpty } from "./../../utils/StringsManager";
-import { IAuthServices } from "../interfaces/IAuthServices";
+import HttpClient, {
+  IsSuccess,
+  IsUnauthorized,
+} from "../../../utils/HttpManager";
+import { isStringEmpty } from "../../../utils/StringsManager";
+import { IAuthResponse, IAuthServices } from "../interfaces/IAuthServices";
 /**
  * Login a user with email and password
  * @param AuthModel The model with the email and password
  * @returns The user data
  */
-export const AuthLogin = async (AuthModel: IAuthServices) => {
+export const AuthLogin = async (AuthModel: IAuthServices): Promise<IAuthResponse> => {
   const { email, password } = AuthModel;
 
-  if (isStringEmpty(email)) 
+  if (isStringEmpty(email))
     throw new Error("Email is required");
-
+  
   if (isStringEmpty(password)) 
     throw new Error("Password is required");
 
@@ -20,13 +23,13 @@ export const AuthLogin = async (AuthModel: IAuthServices) => {
     password,
   });
 
-  if (!IsSuccess(response.status)) 
-    throw new Error("Invalid credentials");
+  if (!IsSuccess(response.status))
+    throw new Error("Failed to login");
 
-  if (IsUnauthorized(response.status)) 
-    throw new Error("Unauthorized access");
+  if (IsUnauthorized(response.status))
+    throw new Error("Unauthorized");
 
-  return response.data;
+  return response.data as IAuthResponse;
 };
 /**
  * Logout a user with a token
@@ -41,5 +44,5 @@ export const AuthLogout = async (token: string) => {
   if (!IsSuccess(response.status)) 
     throw new Error("Failed to logout");
 
-  return response.data;
+  return response.data as IAuthResponse;
 };

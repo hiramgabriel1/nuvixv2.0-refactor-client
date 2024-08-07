@@ -6,7 +6,7 @@ import { Loading } from "../../../components/Utils/Loading";
  * @returns AuthorizationLayout component with the routes for the user who is logged in
  */
 export const AuthorizationLayout = () => {
-  const {data, error, isLoading} = useAuth();
+  const { isLogged, loading } = useAuth();
   const location = useLocation();
 
   if (loading) {
