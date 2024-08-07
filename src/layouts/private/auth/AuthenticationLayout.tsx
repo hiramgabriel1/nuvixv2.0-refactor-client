@@ -9,6 +9,7 @@ export const AuthenticationLayout = () => {
   // We use the useLocation hook to get the current location
   const location = useLocation();
   const { token } = useToken();
+  console.log("token", token);
   // If the user is logged in, we redirect to the home page
   if (token) {
     return <Navigate to="/" state={{ from: location.pathname }} replace />;
