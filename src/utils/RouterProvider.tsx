@@ -3,7 +3,7 @@ import { AuthenticationLayout } from "../layouts/private/auth/AuthenticationLayo
 import { AuthorizationLayout } from "../layouts/private/auth/AuthorizationLayout";
 import { MainLayout } from "../layouts/public/MainLayout";
 import IndexPage from "../pages/IndexPage";
-import PageNotFound from "../components/Error/PageNotFound";
+import PageNotFound from "../components/Utils/Errors/PageNotFound";
 import App from "../App";
 import ExplorerPage from "../pages/app/ExplorerPage";
 
