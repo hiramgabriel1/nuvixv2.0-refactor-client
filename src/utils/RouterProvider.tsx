@@ -6,6 +6,7 @@ import IndexPage from "../pages/IndexPage";
 import PageNotFound from "../components/Utils/Errors/PageNotFound";
 import App from "../App";
 import ExplorerPage from "../pages/app/ExplorerPage";
+import { LandingPageLayout } from "../layouts/public/LandingPageLayout";
 
 /**
  * RouterProvider This component is responsible for handling the application routes
@@ -16,11 +17,19 @@ export const RouterProvider = () => {
     <Routes>
       {/* Public routes */}
       <Route element={<AuthenticationLayout />}>
-        <Route path="/" element={<IndexPage/>} />
-        <Route path="/auth/login" element={<h1 className="text-black">Aquí va la página de Login</h1>} />
-        <Route path="/auth/register" element={<h1>Aquí va la página de Register</h1>} />
+        <Route element={<LandingPageLayout />}>
+          <Route path="/" element={<IndexPage />} />
+        </Route>
+        <Route
+          path="/auth/login"
+          element={<h1 className="text-black">Aquí va la página de Login</h1>}
+        />
+        <Route
+          path="/auth/register"
+          element={<h1>Aquí va la página de Register</h1>}
+        />
       </Route>
-      
+
       {/* Private routes */}
       <Route element={<AuthorizationLayout />}>
         <Route element={<MainLayout />}>
@@ -29,7 +38,7 @@ export const RouterProvider = () => {
           <Route path="/app/explorer" element={<ExplorerPage />} />
         </Route>
       </Route>
-      
+
       {/* Catch-all route */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
