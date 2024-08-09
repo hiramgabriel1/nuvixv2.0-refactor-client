@@ -1,4 +1,3 @@
-
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useToken } from "../../../stores/useToken";
 /**
@@ -15,9 +14,5 @@ export const AuthenticationLayout = () => {
     return <Navigate to="/" state={{ from: location.pathname }} replace />;
   }
 
-  return (
-    <div className="h-screen w-screen">
-      <Outlet />
-    </div>
-  );
+  return <Outlet />;
 };

@@ -40,7 +40,7 @@ export const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="bg-[white] gap-28 border-white relative top-0 left-0 w-screen h-[84px] border rounded  grid grid-cols-3 place-content-around text-center"
+      className="bg-[white] border-white top-0 left-0 h-[84px] border rounded grid grid-cols-3 place-content-around text-center m-0"
     >
       <NavMenu>
         {NavbarItems.map((item, index) => (

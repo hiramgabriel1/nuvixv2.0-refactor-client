@@ -3,9 +3,9 @@ import {Navbar} from "../../components/Navbars/Navbar";
 
 export const LandingPageLayout = () => {
   return (
-    <div className="absolute min-h-screen min-w-screen">
+    <main>
       <Navbar />
       <Outlet />
-    </div>
+    </main>
   );
 };
