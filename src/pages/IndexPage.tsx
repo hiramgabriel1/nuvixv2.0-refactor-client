@@ -3,13 +3,13 @@ import { Hero } from "../components/Commons/Hero";
 function IndexPage() {
   return (
     <>
-      <Hero styles="h-[4  16px] bg-white relative grid grid-cols-3 items-center">
+      <Hero styles="h-[416px] bg-white relative grid grid-cols-3 items-center">
         <div className="col-span-3 flex flex-col items-center">
           <p className="font-sarabun font-bold text-5xl leading-[68px] text-center w-[636px]">
             Nuvix Dev: Donde los desarrolladores se encuentran y colaboran
           </p>
 
-          <p className="pt-5 font-lato font-normal text-lg leading-5 text-pretty w-[516px] text-neutral-600">
+          <p className="pt-4 font-lato font-normal text-lg text-center  w-[516px] text-neutral-600">
             "Nuvix reúne a profesionales y aficionados de la tecnología en un
             solo lugar. Conéctate, comparte tus ideas y encuentra nuevas
             oportunidades. Con Nuvix Dev, podrás conocer a personas afines y
