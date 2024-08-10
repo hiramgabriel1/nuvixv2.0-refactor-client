@@ -6,8 +6,9 @@ import { FaRegPlayCircle } from "react-icons/fa";
 function IndexPage() {
   return (
     <>
-      <Hero styles="h-[816px] bg-white relative flex flex-col">
-        <div className="flex flex-col items-center mt-[55px]">
+      <Hero styles="h-[816px] bg-white flex flex-col relative botton-0">
+        {/* Contenido principal */}
+        <div className="flex-grow flex flex-col items-center mt-[55px] relative z-10">
           <p className="font-sarabun font-bold text-5xl leading-[68px] text-center w-[636px]">
             Nuvix Dev: Donde los desarrolladores se encuentran y colaboran
           </p>
@@ -18,40 +19,42 @@ function IndexPage() {
             oportunidades. Con Nuvix Dev, podrás conocer a personas afines y
             construir amistades basadas en intereses tecnológicos comunes."
           </p>
+
+          <div className="flex justify-center gap-11 mt-8">
+            <Button
+              mode="none"
+              title="Comenzar"
+              icon={<MdArrowRightAlt className="text-2xl" />}
+              iconPosition="left"
+              styleExtras="border border-none rounded rounded-[22px] bg-[#0EA89BFF] font-lato text-white h-[44px] px-[16px] flex items-center"
+            />
+            <Button
+              mode="secondary"
+              title="Ver demo"
+              icon={<FaRegPlayCircle className="text-xl" />}
+              iconPosition="left"
+              styleExtras="border border-[#0EA89BFF] rounded rounded-[22px] text-[#0EA89BFF] font-lato h-[44px] px-[18px] flex items-center"
+            />
+          </div>
         </div>
-        
-        <div className="absolute top-0 left-[200px] bottom-0 flex items-center">
+
+        {/* Imágenes con z-index más bajo */}
+        <div className="absolute top-[180px] left-[200px] flex items-center z-0">
           <img
             src="/public/images/landingPage/first-agent.png"
             alt="Left"
             className="w-[302px] h-[444px]"
           />
         </div>
-        <div className="absolute top-0 right-[200px] bottom-0 flex items-center ">
+        <div className="absolute top-[180px] right-[200px] flex items-center z-0">
           <img
             src="/public/images/landingPage/second-agent.png"
             alt="Right"
             className="w-[324px] h-[444px]"
           />
         </div>
-
-        <div className="flex justify-center gap-11">
-          <Button 
-            mode="none" 
-            title="Comenzar" 
-            icon={<MdArrowRightAlt className="text-2xl" />}
-            iconPosition="left" 
-            styleExtras="border border-none rounded rounded-[22px] bg-[#0EA89BFF] font-lato text-white h-[44px] px-[16px] flex items-center"
-          />
-          <Button 
-            mode="secondary" 
-            title="Ver demo"
-            icon={<FaRegPlayCircle className="text-xl" />}
-            iconPosition="left"
-            styleExtras="border border-[#0EA89BFF] rounded rounded-[22px] text-[#0EA89BFF] font-lato h-[44px] px-[18px] flex items-center"
-          />
-        </div>
-        <div className="m-auto">
+        {/* Último div en la parte inferior */}
+        <div className="mt-auto relative bg-neutral-100 w-full text-center h-[192px]">
           a
         </div>
       </Hero>
