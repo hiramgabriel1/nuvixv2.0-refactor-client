@@ -2,7 +2,14 @@ import { MdArrowRightAlt } from "react-icons/md";
 import { Button } from "../components/Buttons/Button";
 import { Hero } from "../components/Commons/Hero";
 import { FaRegPlayCircle } from "react-icons/fa";
-
+import dockerIcon from '../assets/images/icons/docker-icon.svg';
+import reactIcon from '../assets/images/icons/react-icon.svg';
+import nodeIcon from '../assets/images/icons/nodejs-icon.svg';
+import postgresIcon from '../assets/images/icons/postgres-icon.svg';
+import typescriptIcon from '../assets/images/icons/typescript-icon.svg';
+import nestIcon from '../assets/images/icons/nest-icon.svg';
+import redisIcon from '../assets/images/icons/redis-icon.svg';
+import tailwindIcon from '../assets/images/icons/tailwind-icon.svg';
 function IndexPage() {
   return (
     <>
@@ -55,8 +62,19 @@ function IndexPage() {
         </div>
 
         {/* Último div en la parte inferior */}
-        <div className="bg-neutral-100 w-full text-center h-[192px] flex">
-          <span className="">Desarrollado con:</span>
+        <div className="bg-neutral-100 w-full h-[192px] flex flex-col items-center justify-center">
+          <span className="text-center m-4 text-neutral-500 text-lg font-sarabun font-semibold">Desarrollado con:</span>
+          <div className="flex mt-4 gap-4 justify-center">
+            <img src={redisIcon} alt="IMG" className="h-12 w-12" />
+            <img src={nestIcon} alt="IMG" className="h-12 w-12" />
+            <img src={typescriptIcon} alt="IMG" className="h-12 w-12" />
+            <img src={postgresIcon} alt="IMG" className="h-12 w-12" />
+            <img src={dockerIcon} alt="IMG" className="h-12 w-12" />
+            <img src={reactIcon} alt="IMG" className="h-12 w-12" />
+            <img src={tailwindIcon} alt="IMG" className="h-12 w-12" />  
+            <img src={nodeIcon} alt="IMG" className="h-12 w-12" />
+
+          </div>
         </div>
       </Hero>
     </>
