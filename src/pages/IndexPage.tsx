@@ -33,14 +33,14 @@ function IndexPage() {
               title="Comenzar"
               icon={<MdArrowRightAlt className="text-2xl" />}
               iconPosition="left"
-              styleExtras="border border-none rounded rounded-[22px] bg-[#0EA89BFF] font-lato text-white h-[44px] px-[16px] flex items-center"
+              styleExtras="border hover:bg-[#0C988DFF] border-none rounded rounded-[22px] bg-[#0EA89BFF] font-lato text-white h-[44px] px-[16px] flex items-center"
             />
             <Button
               mode="secondary"
               title="Ver demo"
               icon={<FaRegPlayCircle className="text-xl" />}
               iconPosition="left"
-              styleExtras="border border-[#0EA89BFF] rounded rounded-[22px] text-[#0EA89BFF] font-lato h-[44px] px-[18px] flex items-center"
+              styleExtras="border  hover:text-[#0C988DFF] border-[#0EA89BFF] rounded rounded-[22px] text-[#0EA89BFF] font-lato h-[44px] px-[18px] flex items-center"
             />
           </div>
         </div>
