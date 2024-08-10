@@ -6,9 +6,9 @@ import { FaRegPlayCircle } from "react-icons/fa";
 function IndexPage() {
   return (
     <>
-      <Hero styles="h-[816px] bg-white flex flex-col relative botton-0">
+      <Hero styles="h-[871px] bg-white flex flex-col">
         {/* Contenido principal */}
-        <div className="flex-grow flex flex-col items-center mt-[55px] relative z-10">
+        <div className="flex-grow flex flex-col items-center mt-[55px] z-10">
           <p className="font-sarabun font-bold text-5xl leading-[68px] text-center w-[636px]">
             Nuvix Dev: Donde los desarrolladores se encuentran y colaboran
           </p>
@@ -39,23 +39,24 @@ function IndexPage() {
         </div>
 
         {/* Imágenes con z-index más bajo */}
-        <div className="absolute top-[180px] left-[200px] flex items-center z-0">
+        <div className="absolute top-[273px] left-[200px] flex items-center z-0">
           <img
             src="/public/images/landingPage/first-agent.png"
             alt="Left"
-            className="w-[302px] h-[444px]"
+            className="w-[302px] h-[444px] [mask-image:linear-gradient(black_80%,transparent)]"
           />
         </div>
-        <div className="absolute top-[180px] right-[200px] flex items-center z-0">
+        <div className="absolute top-[263px] right-[200px] flex items-center z-0">
           <img
             src="/public/images/landingPage/second-agent.png"
             alt="Right"
-            className="w-[324px] h-[444px]"
+            className="w-[324px] h-[444px] [mask-image:linear-gradient(black_80%,transparent)]"
           />
         </div>
+
         {/* Último div en la parte inferior */}
-        <div className="mt-auto relative bg-neutral-100 w-full text-center h-[192px]">
-          a
+        <div className="bg-neutral-100 w-full text-center h-[192px] flex">
+          <span className="">Desarrollado con:</span>
         </div>
       </Hero>
     </>
