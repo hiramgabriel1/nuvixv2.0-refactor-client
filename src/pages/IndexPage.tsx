@@ -11,6 +11,7 @@ import nestIcon from "../assets/images/icons/nest-icon.svg";
 import redisIcon from "../assets/images/icons/redis-icon.svg";
 import tailwindIcon from "../assets/images/icons/tailwind-icon.svg";
 import { Container } from "../components/Commons/Container";
+import { Card } from "../components/Commons/Card";
 function IndexPage() {
   return (
     <>
@@ -80,7 +81,7 @@ function IndexPage() {
         </div>
       </Hero>
 
-      <Container width="100%" height="103vh" background="white">
+      <Container width="100%" height="1117px" background="white">
         <div className="flex flex-col items-center h-full mt-14">
           <h1 className="font-sarabun font-bold text-[64px] leading-[84px] text-center w-[636px]">
             Del problema a la solucion... Nuvix Dev
@@ -91,17 +92,87 @@ function IndexPage() {
             accede a nuevas oportunidades. En Nuvix Dev, construimos amistades y
             colaboramos en proyectos que marcan la diferencia
           </p>
-          {/* // Aqui va haber un imagen de fondo que unas mallas y va tener por encima un video de fondo */}
+
           <div className="w-[1176px] h-[728px] relative top-[98px] flex items-center justify-center">
-            <img src="/public/images/utils/mallas.svg" className="absolute" alt="IMG" />
+            <img
+              src="/public/images/utils/mallas.svg"
+              className="absolute"
+              alt="IMG"
+            />
             <iframe
-            className="z-0"
+              className="z-0"
               width="952"
               height="536"
               src="https://www.youtube.com/embed/F2oWNDq7qiM"
               title="YouTube video player"
-              
+              allowFullScreen
             />
+          </div>
+        </div>
+      </Container>
+      <Container height="1284px" width="100%" background="white">
+        <div className="flex flex-col items-center mt-[124px]">
+          {/* Imagen de fondo */}
+          <div className="relative w-[1176px] h-[728px] flex justify-center items-center">
+            <img
+              src="/public/images/utils/mallas.svg"
+              className="absolute inset-0 w-full object-cover z-0"
+              alt="IMG"
+            />
+            {/* Contenido (título y cards) */}
+            <div className="absolute top-[50px] z-20 text-center">
+              <h1 className="font-sarabun font-bold text-4xl text-neutral-600 mb-8">
+                ¿Qué ofrece Nuvix Dev?
+              </h1>
+
+              {/* Cards */}
+              <div className="grid grid-cols-2 gap-7">
+                <Card
+                  title="Haz networking"
+                  size="sm"
+                  extraStyles="text-left bg-white"
+                >
+                  <p className="text-lg text-neutral-600 text-lato text-left">
+                    En Nuvix Dev podrás hacer networking con otros
+                    desarrolladores e intercambiar conocimientos y experiencias.
+                  </p>
+                </Card>
+
+                <Card
+                  title="Comparte conocimientos"
+                  size="sm"
+                  extraStyles="bg-white"
+                >
+                  <p className="text-lg text-neutral-600 text-lato  text-left">
+                    Crea publicaciones de tecnología y comparte tu conocimiento
+                    con los demás. Podrás compartir tus proyectos para que otros
+                    devs los conozcan.
+                  </p>
+                </Card>
+                <Card
+                  title="Consigue devs para tus proyectos"
+                  size="sm"
+                  extraStyles="bg-white"
+                >
+                  <p className="text-lg text-neutral-600 text-lato text-left">
+                    Tienes algún proyecto en mente que quieras desarrollar? En
+                    Nuvix podrás publicar tu proyecto y encontrar devs que te
+                    ayuden a desarrollarlo.
+                  </p>
+                </Card>
+                <Card
+                  title="Conoce personas con tus intereses"
+                  size="sm"
+                  extraStyles="bg-white"
+                >
+                  <p className="text-lg text-neutral-600 text-lato text-left">
+                    En Nuvix Dev encontrarás personas que cumplan lo mismo que
+                    tu perfil para que puedas crear conexiones con personas como
+                    tú.
+                  </p>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
